@@ -485,15 +485,20 @@ html {
 
 body {
   background-color: #393939;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Sumbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+ "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+ "Segoe UI Emoji", "Segoe UI Sumbol", "Noto Color Emoji";
   font-size: 1.6rem;
   color: white; }
 
 .container {
   width: 100%;
-  max-width: 94rem;
+  max-width: 115rem;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: max-width .2s ease-in-out; }
+  .show-sidebar .container {
+    max-width: 94rem; }
 
 .page {
   min-height: 100vh;
@@ -622,7 +627,7 @@ body {
     background: linear-gradient(90deg, #107EFF 0%, rgba(16, 126, 255, 0.4) 50%, #107EFF 100%);
     border: 1px solid rgba(255, 255, 255, 0.2);
     opacity: 0;
-    transition: opacity .2s ease-in-out, border .1s ease-in-out; }
+    transition: opacity .1s ease-in-out, border .1s ease-in-out; }
   .sidebar__item:hover:before {
     opacity: .5; }
 
@@ -739,3 +744,69 @@ body {
       background-color: #DA3737; }
   .control__btn:hover {
     background-color: #202020; }
+
+.columns__name {
+  width: 100%;
+  height: 3.2rem;
+  background-color: #202020;
+  border: 0.1rem solid #000;
+  border-radius: .2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0 1.5rem; }
+
+.checkbox-list {
+  width: 5%; }
+
+.columns__id {
+  width: 10%; }
+
+.columns__title {
+  width: 45%; }
+
+.columns__team {
+  width: 40%; }
+
+.sportsmans {
+  width: 100%; }
+
+.sportsmans__list {
+  width: 100%;
+  min-height: 20rem;
+  background-color: #fff; }
+  .sportsmans__list > *:not(:last-child) {
+    margin-bottom: 0.1rem; }
+
+.sportsmans__item {
+  width: 100%;
+  height: 4.2rem;
+  background-color: #393939;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out; }
+  .sportsmans__item:hover {
+    background-color: #107EFF; }
+  .sportsmans__item:active {
+    background-color: #004ea9; }
+
+.sportsmans__id {
+  width: 10%; }
+
+.sportsmans__title {
+  width: 45%;
+  text-transform: capitalize; }
+
+.sportsmans__team {
+  width: 40%;
+  text-transform: capitalize; }
